@@ -1,7 +1,16 @@
-body, h1, h2, h3, ul, li, p, dd, dt, dl {
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
   margin: 0px;
   padding: 0px;
-} 
+}
 
 img {
   display: block;
@@ -24,7 +33,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: #fb5;
 }
 
 .menu ul {
@@ -35,15 +44,15 @@ body {
 
 .menu li a {
   display: block;
-  padding: 10px;
+  padding: 15px 10px;
   margin-right: 10px;
   color: #222;
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: .875rem;
-  letter-spacing: .1rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
 }
 
 .grid-section {
@@ -70,18 +79,18 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: #E54;
+  color: #e54;
 }
 
 .animais h2::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .animais p {
@@ -96,18 +105,22 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-  background: #FB5;
-  border-left: 4px solid #FAF6ED;
-  border-right: 4px solid #FAF6ED;
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
 }
 
 .animais-lista::-webkit-scrollbar-track {
-  background: #FAF6ED;
+  background: #faf6ed;
 }
 
 .animais-descricao {
@@ -126,8 +139,8 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
-  color: #E54;
+  margin-bottom: 0.5rem;
+  color: #e54;
 }
 
 .faq-lista dt::before {
@@ -136,12 +149,12 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 30px;
 }
 
@@ -164,13 +177,13 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .copy {
   grid-column: 3 / 5;
   margin-bottom: 2rem;
-  background-color: #FB5;
+  background-color: #fb5;
 }
 
 .copy p {
@@ -184,7 +197,9 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .menu, .grid-section, .copy {
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
   }
 
@@ -197,7 +212,9 @@ body {
     grid-column: 1;
   }
 
-  .faq-lista, .dados, .mapa {
+  .faq-lista,
+  .dados,
+  .mapa {
     grid-column: 1 / 3;
   }
 
@@ -211,5 +228,25 @@ body {
 
   .copy {
     margin-bottom: 0px;
+  }
+}
+
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js .js-tabcontent section.ativo {
+  display: block !important;
+  animation: show 0.8s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
